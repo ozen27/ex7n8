@@ -1,0 +1,68 @@
+import random
+
+def question_3():
+    user_arrow = int(input("Enter '1' if count up, enter '2' if count down: "))
+    if user_arrow == 1:
+        user_top = int(input("Enter the top number: "))
+        for x in range(1, user_top + 1, +1):
+            print(x)
+    if user_arrow == 2:
+        user_bottom = int(input("Enter the bottom number: "))
+        for y in range(20, user_bottom, -1):
+            print(y)
+    else:
+        print("I don't understand")        
+'''question_3()'''
+
+def question_4():
+    score = 0
+    for x in range(5):
+        num1 = random.randint(1,100)
+        num2 = random.randint(1,100)
+        correct = num1 + num2 
+        print(num1, '+', num2, '=')
+        answer = int(input("Enter your answer: "))
+        print()
+
+        if answer == correct:
+            score += 1
+    print(f"You scored {score} out of 5")        
+'''question_4()'''
+
+def question_5():
+    x = 1
+'''question_5()'''    
+
+def question_6():
+    mylist = []
+    for x in range(10):
+        num = float(input("Enter a number: "))
+        mylist.append(num)
+    
+    num_max, num_min = mylist[0], mylist[0]
+    for x in mylist:
+        if x > num_max:
+            num_max = x
+        if x < num_min:
+            num_min = x
+
+    print(f"mylist = {mylist}")     
+    print(f"Maximum number is {num_max}")       
+    print(f"Minimum number is {num_min}")      
+'''question_6()'''
+
+def question_1():
+    def num_var():
+        num1 = int(input("Enter a number: "))
+        return num1
+    
+    def count(num1):
+        for x in range(1, num1 + 1 , +1):
+            print(x)
+    def main():
+        num1 = num_var()
+        count(num1)
+    main()    
+
+'''question_1()'''        
+
